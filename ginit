@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+#ginit --->
+
+read -rep $'GitHub username:\n' username
+
+read -rep $'GitHub access token or password:\n' password
+
+echo ''
+
+echo $username && echo $password
+
