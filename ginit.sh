@@ -3,10 +3,12 @@
 url=$1
 repo_name=${url##*/}
 
-#create a directory with a name of created repository, repository url must be provided
-#mkdir $repo_name && cd $repo_name
-
 git clone $url
+if [[ -z $url ]]; then
+	#tbd insert help lines or cat help file
+	echo "Repository URL is missing"
+	echo "Try again and provide repository URL"
+
 cd $repo_name
 git init
 
