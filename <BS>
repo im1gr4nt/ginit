@@ -5,8 +5,6 @@
 #assign usernae and password to variables
 read -rep $'GitHub username:\n' username
 
-read -rsp $"GitHub access token or password:" password  
-
-echo "\n"
+read -rpe $"GitHub access token or password:" password  
 
 
