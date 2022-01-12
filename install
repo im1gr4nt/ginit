@@ -4,8 +4,6 @@
 wget https://github.com/im1gr4nt/ginit/archive/refs/heads/master.zip
 unzip master.zip
 
-#remove .zip file 
-rm -rf master.zip
 
 #create a bin directory in $HOME if it doesnt exist
 if [ ! -d "/home/$USER/bin/" ]; then
@@ -16,3 +14,5 @@ fi
 
 mv ./ginit-master/ginit /home/$USER/bin/
 
+#remove unneccesary files  
+rm -rf master.zip ginit-master
