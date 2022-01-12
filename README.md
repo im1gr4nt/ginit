@@ -4,10 +4,10 @@ Ginit is a script which will help you to clone GitHub repository and initialize 
 
 ## Installation
 
-Prereguisites: wget, unzip, git 
+Prerequisites: wget, unzip, git 
 
 ```bash
-wget https://raw.githubusercontent.com/im1gr4nt/ginit/master/install | bash
+wget -O - https://raw.githubusercontent.com/im1gr4nt/ginit/master/install | bash
 ```
 
 ## Usage 
