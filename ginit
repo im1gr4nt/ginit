@@ -2,11 +2,21 @@
 
 #ginit --->
 
-#assign usernae and password to variables
+#assign username and password to variables
 read -rep $'GitHub username:\n' username
-
 read -rsp $"GitHub access token or password:" password  
 
-echo "\n"
+#provide repository URL
+read -rep $'Repository URL:' url
 
+#combine 3 variables to get 
+#https://<username>:<password>@github.com/username/repo_name
+https='https://'
+#remove https from url and apply https username and password
+url=${url/$https/$https$username:$password@}
 
+#get repository
+git clone $url
+dir=${url##*/}
+cd $dir
+git init
