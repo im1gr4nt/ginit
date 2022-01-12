@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#download and unzip .zip package
+wget https://github.com/im1gr4nt/ginit/archive/refs/heads/master.zip
+unzip master.zip
+
+#remove .zip file 
+rm -rf master.zip
+
+#create a bin directory in $HOME if it doesnt exist
+if [ ! -d "/home/$USER/bin/" ]; then
+	mkdir "/home/$USER/bin/"
+else 
+	:
+fi
+
+mv ./ginit-master/ginit /home/$USER/bin/
+
