@@ -6,13 +6,19 @@ unzip master.zip
 
 
 #create a bin directory in $HOME if it doesnt exist
-if [ ! -d "/home/$USER/bin/" ]; then
-	mkdir "/home/$USER/bin/"
+if [ ! -d "$HOME/bin/" ]; then
+	mkdir "$HOME/bin/"
 else 
 	:
 fi
 
-mv ./ginit-master/ginit /home/$USER/bin/
+#check if path is correct -> ~/bin should be added 
+if [[ echo $PATH | grep "$HOME/bin" ]]; then
+	:
+else
+	export PATH="$HOME/bin:$PATH"
+
+mv ./ginit-master/ginit $HOME/bin/
 
 #remove unneccesary files  
 rm -rf master.zip ginit-master
