@@ -4,7 +4,7 @@
 
 #assign username and password to variables
 read -rep $'GitHub username:\n' username
-read -rsp $"GitHub access token or password:" password  
+read -rsp $'GitHub access token or password:\n' password  
 
 #provide repository URL
 read -rep $'Repository URL:' url
